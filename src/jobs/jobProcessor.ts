@@ -126,7 +126,7 @@ export class JobProcessor {
       patterns: [
         calcPattern((value: JobData) => (Number(value.info.complexity) <= 50), "Complexity <= 50"),
         calcPattern((value: JobData) => (Number(value.info.complexity) > 50), 'Complexity > 50'),
-        calcPattern((value: JobData) => (Number(value.info.failProbability) > 50), 'Fail probability <= 50'),
+        calcPattern((value: JobData) => (Number(value.info.failProbability) <= 50), 'Fail probability <= 50'),
         calcPattern((value: JobData) => (Number(value.info.failProbability) > 50), 'Fail probability > 50'),
         calcPattern((value: JobData) => (value.info.name.endsWith('retry')), 'Retried'),
         calcPattern((value: JobData) => (

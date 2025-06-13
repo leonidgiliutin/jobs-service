@@ -2,6 +2,10 @@
 
 setlocal EnableDelayedExpansion
 
+if "%~1"=="" (
+    echo Usage: .\add_jobs.bat {num} , num is the number of jobs to be added
+    exit /b
+)
 REM Loop from 1 to 10
 for /L %%i in (1,1,%1) do (
     echo:

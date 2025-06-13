@@ -28,7 +28,7 @@ export const startJob = asyncHandler(async (req: TypedRequestBody<AddJobBody>, r
   const {name} = req.body;
   const {complexity, failProbability} = req.body.args;
   processor.addJob(name, [complexity, failProbability]);
-  res.send(`${name} started with complexity ${complexity} and fail probability ${failProbability}%`);
+  res.send(`${name} added with complexity ${complexity} and fail probability ${failProbability}%`);
 });
 
 export const getStats = asyncHandler(async (_req: Request, res: Response) => {

@@ -8,7 +8,7 @@ app.use(express.json());
 app.use(errorHandler);
 
 app.get('/', (_req, res) => {
-  res.send('API is working');
+  res.send('Jobs service API');
 });
 
 app.listen(PORT, () => {
